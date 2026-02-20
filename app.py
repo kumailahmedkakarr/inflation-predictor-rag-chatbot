@@ -25,22 +25,48 @@ def chatbot(query):
     return response.choices[0].message.content
 
 
-with gr.Blocks(
-    theme=gr.themes.Base(),
-    css="""
+with gr.Blocks() as demo:
+
+    gr.HTML("""
+    <style>
     body {
-        background-color: #0f172a;
-        color: white;
+        background-color: #111827 !important;
     }
+
     .gradio-container {
-        background-color: #0f172a;
+        background-color: #111827 !important;
+        color: #ffffff !important;
     }
+
     textarea, input {
-        background-color: #1e293b !important;
-        color: white !important;
+        background-color: #1f2937 !important;
+        color: #ffffff !important;
+        border-radius: 8px !important;
+        border: 1px solid #374151 !important;
     }
-"""
-) as demo:
+
+    button {
+        background-color: #2563eb !important;
+        color: white !important;
+        border-radius: 8px !important;
+        font-weight: bold !important;
+    }
+
+    button:hover {
+        background-color: #1d4ed8 !important;
+    }
+
+    .output {
+        background-color: #1f2937 !important;
+        color: #ffffff !important;
+        border-radius: 8px !important;
+    }
+
+    h1, h2, h3, label {
+        color: #f9fafb !important;
+    }
+    </style>
+    """)
 
     gr.Markdown("# 🌍 EcoMind AI")
     gr.Markdown("### Inflation Predictor & Economic Advisor (RAG Model)")
@@ -49,7 +75,7 @@ with gr.Blocks(
     gr.Interface(
         fn=chatbot,
         inputs=gr.Textbox(label="Ask about Inflation"),
-        outputs="text"
+        outputs=gr.Textbox(label="AI Response")
     )
 
 demo.launch()
