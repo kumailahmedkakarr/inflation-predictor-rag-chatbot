@@ -88,5 +88,5 @@ gr.Interface(
     fn=chatbot,
     inputs=gr.Textbox(label="Ask about inflation"),
     outputs="text",
-    title="Inflation Predictor & Advisor (RAG – Python 3.14 Compatible)"
+    title="EcoMind AI: Inflation Predictor & Advisor"
 ).launch()
