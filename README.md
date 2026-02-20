@@ -1,24 +1,29 @@
-# Inflation Predictor & Advisor (RAG-Based AI Chatbot)
+# 🌍 EcoMind AI
 
-## 📌 Overview
-This project is an AI-powered chatbot that predicts inflation trends and provides advisory insights using Retrieval-Augmented Generation (RAG).
+AI-Powered Inflation Predictor & Economic Advisory System
 
-## 🧠 Technologies Used
-- Python
-- Prophet (Time-Series Forecasting)
-- LangChain + FAISS (RAG)
-- HuggingFace Embeddings
-- Groq LLM (Mixtral)
-- Gradio UI
+## 🔥 Features
 
-## 📊 Features
-- Inflation forecasting (5 years)
-- Root cause analysis
-- Government & citizen role explanation
-- Roman Urdu + English responses
+- Time-Series Forecasting (Prophet)
+- Retrieval-Augmented Generation (FAISS + Embeddings)
+- Mixtral LLM via Groq
+- Roman Urdu + English Advisory
+- Dark Themed Professional UI
 
-## ⚙️ Installation
-```bash
-git clone https://github.com/yourusername/inflation-predictor-rag-chatbot.git
-cd inflation-predictor-rag-chatbot
-pip install -r requirements.txt
+## 📊 What It Does
+
+This system:
+- Predicts inflation for next 5 years
+- Explains root causes
+- Suggests government policy
+- Advises citizens
+- Combines RAG + Forecasting
+
+## 🧠 Example Questions
+
+- Pakistan mein inflation kyun barh rahi hai?
+- Government inflation kaise control kare?
+- Inflation ke daur mein savings ka best tareeqa?
+- Next 5 years inflation trend kya hoga?
+
+## 🚀 Run Project
