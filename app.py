@@ -1,7 +1,9 @@
 import gradio as gr
 from groq import Groq
-import os
+
 from dotenv import load_dotenv
+import os
+
 
 load_dotenv()
 
