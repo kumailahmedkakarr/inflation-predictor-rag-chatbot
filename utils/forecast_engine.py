@@ -2,7 +2,7 @@ import pandas as pd
 from prophet import Prophet
 
 def generate_forecast():
-    df = pd.read_csv("data/inflation_data.csv")
+   df = pd.read_csv("data/inflation_data.csv")
     df.columns = ["ds", "y"]
     df["ds"] = pd.to_datetime(df["ds"])
 
