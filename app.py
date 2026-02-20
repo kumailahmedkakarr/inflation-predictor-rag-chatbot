@@ -30,19 +30,29 @@ with gr.Blocks() as demo:
     gr.HTML("""
     <style>
     body {
-        background-color: #111827 !important;
+        background-color: #f4f6f9 !important;
     }
 
     .gradio-container {
-        background-color: #111827 !important;
-        color: #ffffff !important;
+        background-color: #f4f6f9 !important;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    h1 {
+        color: #1f2937 !important;
+        font-weight: bold;
+    }
+
+    h2, h3, label {
+        color: #374151 !important;
     }
 
     textarea, input {
-        background-color: #1f2937 !important;
-        color: #ffffff !important;
+        background-color: #ffffff !important;
+        color: #111827 !important;
         border-radius: 8px !important;
-        border: 1px solid #374151 !important;
+        border: 1px solid #d1d5db !important;
+        padding: 10px !important;
     }
 
     button {
@@ -50,6 +60,7 @@ with gr.Blocks() as demo:
         color: white !important;
         border-radius: 8px !important;
         font-weight: bold !important;
+        padding: 8px 16px !important;
     }
 
     button:hover {
@@ -57,13 +68,10 @@ with gr.Blocks() as demo:
     }
 
     .output {
-        background-color: #1f2937 !important;
-        color: #ffffff !important;
+        background-color: #ffffff !important;
+        color: #111827 !important;
         border-radius: 8px !important;
-    }
-
-    h1, h2, h3, label {
-        color: #f9fafb !important;
+        border: 1px solid #d1d5db !important;
     }
     </style>
     """)
@@ -72,10 +80,14 @@ with gr.Blocks() as demo:
     gr.Markdown("### Inflation Predictor & Economic Advisor (RAG Model)")
     gr.Markdown("Ask about inflation causes, policies, or future trends.")
 
-    gr.Interface(
-        fn=chatbot,
-        inputs=gr.Textbox(label="Ask about Inflation"),
-        outputs=gr.Textbox(label="AI Response")
-    )
+    with gr.Row():
+        user_input = gr.Textbox(label="Ask about Inflation")
+
+    with gr.Row():
+        output_box = gr.Textbox(label="AI Response")
+
+    submit_btn = gr.Button("Submit")
+
+    submit_btn.click(chatbot, inputs=user_input, outputs=output_box)
 
 demo.launch()
