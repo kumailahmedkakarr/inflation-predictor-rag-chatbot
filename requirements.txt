@@ -1,11 +1,8 @@
-
-
-
 gradio
-pandas
-prophet
-sentence-transformers
-faiss-cpu
 groq
 python-dotenv
+pandas
+prophet
+faiss-cpu
+sentence-transformers
 numpy
