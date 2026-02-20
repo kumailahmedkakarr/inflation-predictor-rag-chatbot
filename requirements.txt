@@ -1,8 +1,11 @@
+
+
+
 gradio
 pandas
 prophet
-langchain
-faiss-cpu
 sentence-transformers
+faiss-cpu
 groq
 python-dotenv
+numpy
