@@ -26,7 +26,7 @@ df["ds"] = pd.to_datetime(df["ds"], format="%Y")
 model = Prophet()
 model.fit(df)
 
-future = model.make_future_dataframe(periods=5, freq="Y")
+future = model.make_future_dataframe(periods=5, freq="YE")
 forecast = model.predict(future)
 future_inflation = forecast[["ds", "yhat"]].tail(5)
 
