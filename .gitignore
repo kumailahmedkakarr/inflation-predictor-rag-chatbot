@@ -1,2 +1,18 @@
-.env
+# Python
 __pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+env/
+
+# Environment variables
+.env
+
+# Models
+models/
+*.pkl
+
+# OS files
+.DS_Store
+Thumbs.db
