@@ -11,7 +11,7 @@ from utils.rag_engine import retrieve_context
 from utils.forecast_engine import generate_forecast
 from utils.prompt_template import build_prompt
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+print("Loaded API:", os.getenv("GROQ_API_KEY"))
 def chatbot(query):
     context = retrieve_context(query)
     forecast_text = generate_forecast()
